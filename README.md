@@ -1,30 +1,27 @@
-# Welcome to Structured Perps
+# Welcome
 
-**The first on-chain pair trading exchange.**
+**The first on-chain ratio perpetuals exchange.**
 
-Structured Perps brings ratio perpetual contracts to Hyperliquid via HIP-3 — a new class of derivatives that track the price ratio between two assets. Instead of managing two separate positions to pair trade, you trade a single ratio instrument like **HYPE/ETH** — with one margin, one liquidation price, and zero risk of getting liquidated when your thesis is right.
+Structured Perps brings ratio perpetual contracts to Hyperliquid via HIP-3. Trade the relative performance between two assets in a single position.
 
-## What we offer
+## Why ratio perps?
 
-* **Ratio perpetuals** — Trade the relationship between two assets, not their absolute price
-* **No liquidation trap** — Liquidation is based on the ratio, not individual asset prices. Your short leg can't blow up when both assets pump.
-* **Up to 10x leverage** — Go long or short on asset ratios with capital efficiency
-* **Hourly funding** — Standard Hyperliquid funding mechanics, applied to ratio prices
-* **24/7 trading** — Crypto-native assets mean markets never close
+A ratio perp tracks `price(A) / price(B)`. Instead of managing two separate positions to pair trade, you get:
 
-## Launch markets
+* **Single position** — One margin, one liquidation price, one fee
+* **No liquidation trap** — Liquidation is based on the ratio, not individual asset prices
+* **Up to 10x leverage** — Capital-efficient exposure to relative value
+* **24/7 trading** — Crypto-native assets, markets never close
 
-| Market | Ratio | Trade thesis |
-|--------|-------|-----------|
-| **SOL/ETH** | ~0.075 | Solana outperforms Ethereum |
-| **HYPE/ETH** | ~0.0088 | Hyperliquid outperforms legacy DeFi |
+## Markets
+
+| Market | Ratio | Description |
+|--------|-------|-------------|
+| **SOL/ETH** | ~0.075 | Solana vs Ethereum |
+| **HYPE/ETH** | ~0.0088 | Hyperliquid vs legacy DeFi |
 | **ETH/BTC** | ~0.028 | The classic macro rotation |
 
-## Quick links
-
-{% content-ref url="why-ratio-perps.md" %}
-[why-ratio-perps.md](why-ratio-perps.md)
-{% endcontent-ref %}
+All markets are standard HIP-3 perpetuals on Hyperliquid with hourly funding.
 
 {% content-ref url="trading/getting-started.md" %}
 [getting-started.md](trading/getting-started.md)

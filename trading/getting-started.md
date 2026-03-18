@@ -1,34 +1,27 @@
 # Getting Started
 
-## Access the platform
+## Accessing Structured Perps
 
-Visit [structuredperps.xyz](https://structuredperps.xyz) to access the trading interface, staking vault, and points dashboard. No downloads or extensions required.
+Structured Perps is a non-custodial interface to HIP-3 perpetuals deployed on Hyperliquid. All trades execute on Hyperliquid's decentralized infrastructure.
 
-All Structured Perps markets are standard HIP-3 perpetuals on Hyperliquid. You can also trade them directly from:
+Visit [structuredperps.xyz](https://structuredperps.xyz) or trade directly from the Hyperliquid interface — our markets appear in the HIP-3 section.
 
-* **Hyperliquid native interface** — Markets appear in the HIP-3 section
-* **Any HIP-3 compatible frontend** — Third-party interfaces that support builder-deployed perps
-* **API** — Direct REST and WebSocket access via the Hyperliquid API
+## Trading
 
-## Connect your wallet
+You use your existing Hyperliquid account. Deposit USDC on Hyperliquid and you can trade all ratio perp markets.
 
-For **trading**, you use your existing Hyperliquid account. Deposit USDC on Hyperliquid and you can trade all ratio perp markets.
+1. Select a market (SOL/ETH, HYPE/ETH, or ETH/BTC)
+2. Choose **Long** (ratio goes up) or **Short** (ratio goes down)
+3. Set your leverage (1x–10x)
+4. Enter your position size
+5. Confirm the trade
 
-For **staking**, connect an EVM wallet (MetaMask, Rabby, or any WalletConnect-compatible wallet) to HyperEVM:
+## Staking
+
+To stake HYPE in the svHYPE vault, connect an EVM wallet (MetaMask, Rabby) to HyperEVM:
 
 | Network | Value |
 |---------|-------|
 | Chain ID | 999 |
 | RPC URL | `https://rpc.hyperliquid.xyz/evm` |
 | Currency | HYPE |
-
-## Place your first trade
-
-1. Go to the **Trade** page
-2. Select a market (SOL/ETH, HYPE/ETH, or ETH/BTC)
-3. Choose **Long** (ratio goes up) or **Short** (ratio goes down)
-4. Set your leverage (1x–10x)
-5. Enter your position size
-6. Confirm the trade
-
-Your position appears in the positions panel below the chart.

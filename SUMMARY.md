@@ -15,10 +15,10 @@
 * [Fees & Funding](trading/fees.md)
 * [Oracle & Pricing](trading/oracle.md)
 
-## svHYPE Vault
+## svHYPE
 
 * [Staking](vault/staking.md)
-* [Points Program](vault/points.md)
+* [Points](vault/points.md)
 
 ## Resources
 

@@ -1,36 +1,21 @@
-# SOL/ETH — Solana vs Ethereum
+# SOL/ETH
 
-## Overview
+Tracks the price ratio of SOL to ETH.
 
-SOL/ETH tracks the price ratio of SOL to ETH, computed by our custom oracle aggregating prices from multiple independent sources.
-
-**Current ratio:** ~0.075 (SOL ≈ $140 / ETH ≈ $1,870)
+**Current ratio:** ~0.075
 
 ## Specifications
 
 | Parameter | Value |
 |-----------|-------|
 | Underlying | `price(SOL) / price(ETH)` |
-| Contract multiplier | $100 |
 | Max leverage | 10x |
 | Initial margin | 10% |
-| Oracle | Custom multi-source oracle (required by HIP-3) |
 | Funding | Hourly |
+| Settlement | USDC |
 
 ## Use cases
 
-**L1 rotation.** Capital rotates between L1 ecosystems. SOL/ETH captures this flow in a single instrument without absolute price exposure.
-
-**Relative value.** The SOL/ETH ratio exhibits identifiable regimes and mean-reverting tendencies around macro events. Trade the range without worrying about which way the broader market moves.
-
-**No liquidation trap.** With a traditional pair trade (long SOL, short ETH), a broad market pump can liquidate your ETH short even if SOL outperforms. With SOL/ETH ratio perps, liquidation is based on the ratio — not individual prices.
-
-## Example
-
-If you believe SOL will outperform ETH over the next month:
-
-* **Long SOL/ETH** at 0.075 with 5x leverage
-* If SOL/ETH moves to 0.080 → **+6.7% profit** (33.5% with leverage)
-* If SOL/ETH drops to 0.070 → **-6.7% loss** (33.5% with leverage)
-
-You profit regardless of whether both assets go up or down — only the ratio matters.
+* **L1 rotation** — Trade SOL outperformance vs ETH without absolute price exposure
+* **Relative value** — Mean-reverting behavior around macro events
+* **Hedging** — Hedge ETH beta on a SOL long by going long SOL/ETH
