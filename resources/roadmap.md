@@ -3,7 +3,7 @@
 ## Current
 
 * 3 ratio perp markets (SOL/ETH, HYPE/ETH, ETH/BTC)
-* svHYPE staking vault
+* spHYPE staking vault
 * Points program
 
 ## Upcoming

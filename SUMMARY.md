@@ -15,10 +15,10 @@
 * [Fees & Funding](trading/fees.md)
 * [Oracle & Pricing](trading/oracle.md)
 
-## svHYPE
+## spHYPE
 
 * [Staking](vault/staking.md)
-* [Points](vault/points.md)
+* [Early Participants](vault/points.md)
 
 ## Resources
 

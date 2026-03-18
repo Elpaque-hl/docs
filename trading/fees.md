@@ -19,4 +19,4 @@ Fees are split 50/50 between the deployer and the Hyperliquid protocol.
 
 ## Revenue distribution
 
-A portion of trading fees flows to svHYPE vault stakers. See [Staking](../vault/staking.md) for details.
+A portion of trading fees flows to spHYPE vault stakers. See [Staking](../vault/staking.md) for details.

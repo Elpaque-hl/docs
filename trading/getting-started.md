@@ -18,7 +18,7 @@ You use your existing Hyperliquid account. Deposit USDC on Hyperliquid and you c
 
 ## Staking
 
-To stake HYPE in the svHYPE vault, connect an EVM wallet (MetaMask, Rabby) to HyperEVM:
+To stake HYPE in the spHYPE vault, connect an EVM wallet (MetaMask, Rabby) to HyperEVM:
 
 | Network | Value |
 |---------|-------|

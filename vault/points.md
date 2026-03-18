@@ -1,21 +1,13 @@
-# Points
+# Early Participants
 
-## Overview
+## For stakers
 
-The points program rewards early stakers and traders. Points are complementary to yield.
+spHYPE depositors earn real yield from validator staking and trading fees. Early stakers who help bootstrap the 500K HYPE requirement will be recognized.
 
-## Earning points
+## For traders
 
-**Staking** — Depositors earn points proportional to their svHYPE holdings over time.
+Trading on [structuredperps.xyz](https://structuredperps.xyz) may come with additional benefits for early users. Activity on our interface is tracked.
 
-**Trading** — Active traders earn points proportional to volume across all markets.
+## More details
 
-## Withdrawal impact
-
-Points use a **LIFO** model. Withdrawals forfeit the most recently earned points first.
-
-## Emission
-
-* Weekly distribution
-* **First week: boosted emission** for earliest participants
-* Seasons — Season 1 begins at launch
+Further details on early participant rewards will be announced as the protocol approaches mainnet launch.
