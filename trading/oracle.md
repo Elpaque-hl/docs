@@ -2,13 +2,15 @@
 
 ## How prices work
 
-Each ratio perpetual has a dedicated oracle that computes the ratio price in real time:
+Each ratio perpetual has a dedicated **custom oracle** operated by Structured Perps, as required by the HIP-3 specification. The oracle computes the ratio price in real time:
 
 ```
-ratio(t) = markPrice(Asset A) / markPrice(Asset B)
+ratio(t) = price(Asset A) / price(Asset B)
 ```
 
-Prices are sourced from Hyperliquid's WebSocket feed, which provides mark prices for all perpetual markets at sub-second granularity. **No third-party oracle dependency** — all underlying assets are native Hyperliquid perpetuals.
+Our oracle aggregates prices from multiple independent sources — including centralized exchanges (Binance, Bybit) and Hyperliquid's own mark prices — to compute a robust, manipulation-resistant ratio. The aggregated price is then submitted on-chain as the oracle price for each HIP-3 market.
+
+**This is a requirement, not a choice.** HIP-3 mandates that each builder-deployed perpetual operates its own oracle. Relying solely on Hyperliquid's internal price feeds is not permitted and would result in slashing of the builder's stake.
 
 ## Safety mechanisms
 
@@ -27,6 +29,10 @@ HYPE/ETH has a wider threshold reflecting HYPE's higher natural volatility.
 ### Stale detection
 
 If no price update is received for more than 30 seconds, the oracle pauses quoting until the feed resumes. This protects against stale prices during network issues.
+
+### Multi-source validation
+
+The oracle cross-checks prices across all sources before publishing. If any single source deviates significantly from the others, it is excluded from the aggregate. This protects against exchange-specific outages or manipulation.
 
 ## Market making
 

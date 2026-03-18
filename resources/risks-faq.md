@@ -4,8 +4,10 @@
 
 ### Oracle risk
 
-* **Price feed failure** — Mitigated by circuit breakers that auto-pause markets
-* **Price manipulation** — Hyperliquid mark prices use TWAP/EMA smoothing, resistant to single-trade manipulation
+Our custom oracle aggregates prices from multiple independent sources (CEXes + Hyperliquid). Risks include:
+
+* **Price feed failure** — Mitigated by circuit breakers that auto-pause markets and multi-source validation that excludes outlier feeds
+* **Price manipulation** — Multi-source aggregation makes single-exchange manipulation ineffective. Outlier detection discards deviating sources.
 * **Stale prices** — 30-second staleness detection pauses quoting automatically
 
 ### Smart contract risk
@@ -20,7 +22,7 @@ During the bootstrap phase, the protocol's market maker may be the primary liqui
 
 * **500K minimum** — Withdrawals may be temporarily restricted if vault balance is near the minimum
 * **Undelegation delay** — 24 hours to undelegate from the validator
-* **Slashing** — If protocol rules are violated, staked HYPE may be partially slashed
+* **Slashing** — If protocol rules are violated (e.g. oracle misbehavior), staked HYPE may be partially slashed
 
 ---
 
@@ -28,7 +30,11 @@ During the bootstrap phase, the protocol's market maker may be the primary liqui
 
 **What is a ratio perpetual?**
 
-A perpetual contract that tracks `price(A) / price(B)` instead of a single asset price. It lets you trade the relative performance between two assets.
+A perpetual contract that tracks `price(A) / price(B)` instead of a single asset price. It lets you trade the relative performance between two assets in a single position.
+
+**Why is this better than pair trading with two positions?**
+
+With two separate positions, each leg has its own liquidation price based on the absolute price. If both assets pump, your short can get liquidated even if your thesis on relative performance is correct. With a ratio perp, liquidation is based on the ratio — you can't get liquidated when the ratio moves in your favor.
 
 **Do I need HYPE to trade?**
 
@@ -41,6 +47,10 @@ Yes. Our markets are standard HIP-3 perpetuals and appear on the Hyperliquid int
 **What happens if both assets go down?**
 
 You profit or lose based on the **ratio**, not absolute prices. If SOL drops 10% and ETH drops 15%, the SOL/ETH ratio went up — a long position profits.
+
+**How does the oracle work?**
+
+We operate our own custom oracle as required by HIP-3. It aggregates prices from multiple independent sources (centralized exchanges + Hyperliquid), cross-validates them, and submits the ratio price on-chain. See [Oracle & Pricing](../trading/oracle.md) for details.
 
 **Are points worth anything?**
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-ETH/BTC tracks the ratio of the ETH-PERP mark price to the BTC-PERP mark price, both native to Hyperliquid.
+ETH/BTC tracks the price ratio of ETH to BTC, computed by our custom oracle aggregating prices from multiple independent sources.
 
 **Current ratio:** ~0.028 (ETH ≈ $1,870 / BTC ≈ $67,000)
 
@@ -10,11 +10,11 @@ ETH/BTC tracks the ratio of the ETH-PERP mark price to the BTC-PERP mark price, 
 
 | Parameter | Value |
 |-----------|-------|
-| Underlying | `markPrice(ETH) / markPrice(BTC)` |
+| Underlying | `price(ETH) / price(BTC)` |
 | Contract multiplier | $100 |
 | Max leverage | 10x |
 | Initial margin | 10% |
-| Oracle sources | Both Hyperliquid native |
+| Oracle | Custom multi-source oracle (required by HIP-3) |
 | Funding | Hourly |
 
 ## Use cases
@@ -23,4 +23,4 @@ ETH/BTC tracks the ratio of the ETH-PERP mark price to the BTC-PERP mark price, 
 
 **Cross-asset hedging.** A trader long ETH-PERP can short ETH/BTC to isolate ETH alpha from BTC beta — hedging broad market risk while retaining ETH-specific exposure.
 
-**Institutional interest.** ETH/BTC is a staple of traditional crypto fund strategies. Offering it on-chain with leverage attracts sophisticated flow.
+**Institutional-grade pair trading.** ETH/BTC is a staple of traditional crypto fund strategies. With ratio perps, no need to manage two legs — one position, one margin, one liquidation based on the ratio.

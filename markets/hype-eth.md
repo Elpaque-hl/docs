@@ -1,8 +1,8 @@
-# HYPE/ETH — New DeFi vs Old DeFi
+# HYPE/ETH — Hyperliquid vs Legacy DeFi
 
 ## Overview
 
-HYPE/ETH tracks the ratio of the HYPE-PERP mark price to the ETH-PERP mark price, both native to Hyperliquid.
+HYPE/ETH tracks the price ratio of HYPE to ETH, computed by our custom oracle aggregating prices from multiple independent sources.
 
 **Current ratio:** ~0.0088 (HYPE ≈ $16.5 / ETH ≈ $1,870)
 
@@ -10,17 +10,27 @@ HYPE/ETH tracks the ratio of the HYPE-PERP mark price to the ETH-PERP mark price
 
 | Parameter | Value |
 |-----------|-------|
-| Underlying | `markPrice(HYPE) / markPrice(ETH)` |
+| Underlying | `price(HYPE) / price(ETH)` |
 | Contract multiplier | $100 |
 | Max leverage | 10x |
 | Initial margin | 10% |
-| Oracle sources | Both Hyperliquid native |
+| Oracle | Custom multi-source oracle (required by HIP-3) |
 | Funding | Hourly |
 
 ## Use cases
 
-**New vs Old DeFi.** HYPE represents the new wave — high-performance, community-first, revenue-generating. ETH represents the incumbent. This ratio captures the generational shift.
+**New vs Legacy DeFi.** HYPE represents the new wave — high-performance, community-first, revenue-generating. ETH represents the incumbent. HYPE/ETH captures this generational shift in a single instrument.
 
-**Hyperliquid ecosystem momentum.** Rising HYPE/ETH signals capital flowing into the HL ecosystem. The Hyperliquid community can express their conviction in a single instrument.
+**Hyperliquid ecosystem conviction.** Rising HYPE/ETH signals capital flowing into the Hyperliquid ecosystem. The community can express their conviction without needing to short ETH separately and risk getting liquidated on it.
 
-**ETH underperformance trade.** With "ETH is dead" becoming a widespread narrative, go long HYPE/ETH to lean into it, or short to fade it.
+**ETH underperformance trade.** Go long HYPE/ETH if you believe Hyperliquid will continue to outperform legacy DeFi infrastructure, or short to fade it.
+
+## Why HYPE/ETH and not two separate positions?
+
+If you long HYPE and short ETH separately:
+* ETH pumps 30% in a day → your short gets liquidated
+* Even if HYPE pumped 50% → doesn't matter, the short leg already blew up
+
+With HYPE/ETH ratio perps:
+* HYPE/ETH ratio went from 0.0088 to ~0.0101 (+15%)
+* You're in profit. No liquidation. One position, one risk.
