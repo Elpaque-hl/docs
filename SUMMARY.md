@@ -5,9 +5,9 @@
 
 ## Markets
 
-* [SOL/ETH](markets/sol-eth.md)
 * [HYPE/ETH](markets/hype-eth.md)
-* [ETH/BTC](markets/eth-btc.md)
+* [HYPE/SOL](markets/hype-sol.md)
+* [HYPE/BNB](markets/hype-bnb.md)
 
 ## Trading
 

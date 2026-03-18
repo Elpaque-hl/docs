@@ -16,6 +16,6 @@ Tracks the price ratio of HYPE to ETH.
 
 ## Use cases
 
-* **Hyperliquid vs legacy DeFi** — Express conviction on the Hyperliquid ecosystem relative to ETH
+* **Hyperliquid vs Ethereum** — Express conviction on the Hyperliquid ecosystem relative to ETH
 * **Ecosystem momentum** — Rising HYPE/ETH signals capital flowing into Hyperliquid
 * **Single-position pair trade** — No need to short ETH separately and risk getting liquidated on it

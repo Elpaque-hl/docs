@@ -2,7 +2,7 @@
 
 **The first on-chain ratio perpetuals exchange.**
 
-Structured Perps is a decentralized exchange on Hyperliquid for ratio perpetual contracts. Trade the relative performance between two assets — like HYPE/ETH or SOL/ETH — in a single position, with no counterparty risk and full self-custody.
+Structured Perps is a decentralized exchange on Hyperliquid for ratio perpetual contracts. Trade the relative performance between two assets — like HYPE/ETH or HYPE/SOL — in a single position, with no counterparty risk and full self-custody.
 
 ## Why ratio perps?
 
@@ -17,9 +17,9 @@ A ratio perp tracks `price(A) / price(B)`. Instead of managing two separate posi
 
 | Market | Ratio | Description |
 |--------|-------|-------------|
-| **SOL/ETH** | ~0.075 | Solana vs Ethereum |
-| **HYPE/ETH** | ~0.0088 | Hyperliquid vs legacy DeFi |
-| **ETH/BTC** | ~0.028 | The classic macro rotation |
+| **HYPE/ETH** | ~0.0088 | Hyperliquid vs Ethereum |
+| **HYPE/SOL** | ~0.12 | Hyperliquid vs Solana |
+| **HYPE/BNB** | ~0.028 | Hyperliquid vs BNB Chain |
 
 All markets are HIP-3 perpetuals deployed on Hyperliquid with hourly funding.
 

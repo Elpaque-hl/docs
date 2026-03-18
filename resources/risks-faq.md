@@ -38,4 +38,4 @@ Yes. Our markets are standard HIP-3 perpetuals.
 
 **What happens if both assets go down?**
 
-You profit or lose based on the ratio. If SOL drops 10% and ETH drops 15%, SOL/ETH went up — a long profits.
+You profit or lose based on the ratio. If HYPE drops 5% and ETH drops 15%, HYPE/ETH went up — a long profits.

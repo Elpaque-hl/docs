@@ -10,7 +10,7 @@ Visit [structuredperps.xyz](https://structuredperps.xyz) or trade directly from 
 
 You use your existing Hyperliquid account. Deposit USDC on Hyperliquid and you can trade all ratio perp markets.
 
-1. Select a market (SOL/ETH, HYPE/ETH, or ETH/BTC)
+1. Select a market (HYPE/ETH, HYPE/SOL, or HYPE/BNB)
 2. Choose **Long** (ratio goes up) or **Short** (ratio goes down)
 3. Set your leverage (1x–10x)
 4. Enter your position size
